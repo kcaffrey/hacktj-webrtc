@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <style>
+      #participants {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 10px;
+      }
+      .participant {
+        width: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="participants">
+    </div>
+
+    <script type="module">
+      import { joinMeeting } from "./meeting.js";
+
+      (function(){
+        const participantsEl = document.getElementById("participants");
+        joinMeeting(participantsEl);
+      })();
+    </script>
+  </body>
+</html>
